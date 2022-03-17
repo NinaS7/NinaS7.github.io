@@ -1,0 +1,221 @@
+.cruises {
+  min-height: 883px;
+  margin-bottom: 120px;
+
+  @include vp-1365 {
+    min-height: 1712px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    min-height: 3356px;
+    margin-bottom: 65px;
+  }
+}
+
+.cruises h3 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include vp-1365 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.cruises ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  color: $color-alice-blue;
+
+  @include vp-1365 {
+    padding: 0 15px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    padding: 0 10px;
+    grid-template-columns: none;
+  }
+}
+
+.cruises li {
+  height: 386px;
+  width: 260px;
+  padding: 30px;
+  padding-bottom: 23px;
+  display: flex;
+  align-items: flex-end;
+  background-color: $color-sail;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    //background-size: 260px auto;
+  }
+
+  @include vp-1365 {
+    padding: 35px;
+    padding-bottom: 28px;
+    width: 309px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-size: 309px auto;
+    }
+  }
+
+  @include vp-767 {
+    width: 270px;
+    padding: 16px 25px;
+  }
+}
+
+.cruises h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.cruises__astoria {
+  background-image: url("../img/content/astoria.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/astoria@2x.jpg");
+  }
+}
+
+.cruises__eline {
+  background-image: url("../img/content/atlantis.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/atlantis@2x.jpg");
+  }
+}
+
+.cruises__atlantis {
+  background-image: url("../img/content/atlantis.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/atlantis@2x.jpg");
+  }
+}
+
+.cruises__odysseus {
+  background-image: url("../img/content/odysseus.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/odysseus@2x.jpg");
+  }
+}
+
+.cruises__olympia {
+  background-image: url("../img/content/olympia.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/olympia@2x.jpg");
+  }
+}
+
+.cruises__aurora {
+  background-image: url("../img/content/aurora.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/aurora@2x.jpg");
+  }
+}
+
+.cruises__leonor {
+  background-image: url("../img/content/leonor.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/leonor@2x.jpg");
+  }
+}
+
+.cruises__minion-1 {
+  background-image: url("../img/content/minion-1.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/minion-1@2x.jpg");
+  }
+}
+
+.cruises__info {
+  display: none;
+}
+
+.cruises__info h5 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruises__info p {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruises__link {
+  width: 210px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  display: none;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  text-align: center;
+  padding: 10px 0;
+
+  @include vp-1365 {
+    width: 239px;
+  }
+
+  @include vp-767 {
+    width: 220px;
+  }
+}
+
+.cruises li:hover {
+  padding: 28px 25px 33px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: none;
+  background-color: $color-tangaroa;
+
+  .cruises__info {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .cruises__link {
+    display: block;
+  }
+
+  @include vp-1365 {
+    padding: 28px 34px 33px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 34px;
+  }
+}

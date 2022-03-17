@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  min-height: 73px;
+  position: absolute;
+  background-color: transparent;
+
+  @include vp-1365 {
+    min-height: 50px;
+  }
+
+  @include vp-767 {
+    min-height: 42px;
+  }
+}

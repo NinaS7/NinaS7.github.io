@@ -1,12 +1,13 @@
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: $color-alice-blue;
 
   .header,
   .footer {
@@ -16,14 +17,11 @@
   main {
     flex-grow: 1;
   }
-}
 
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
+  @include vp-1365 {
+    max-width: 768px;
+    background-color: $color-alice-blue;
+  }
 }
 
 .visually-hidden {

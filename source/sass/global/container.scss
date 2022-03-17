@@ -1,10 +1,17 @@
 .container {
-  width: 100%;
-  max-width: 1920px;
+  width: 1160px;
+  height: 100%;
   margin: 0 auto;
-  padding: 0 40px;
 
-  @include vp-1439 {
+  @include vp-1365 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+  }
+
+  /* @include vp-1439 {
     padding: 0 32px;
   }
 
@@ -15,4 +22,5 @@
   @include vp-767 {
     padding: 0 16px;
   }
+  */
 }
