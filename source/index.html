@@ -8,9 +8,9 @@
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserratregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserratmedium.woff2" as="font">
-    <link rel="preload" href="fonts/montserratsemibold.woff2" as="font">
-    <link rel="preload" href="fonts/montserratbold.woff2" as="font">
+    <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
   </head>
 
   <body>
@@ -23,6 +23,7 @@
       <header class="header">
         <div class="container">
           <nav class="nav nav--closed nav--nojs">
+            <div class="nav__wrapper">
             <div class="nav__menu">
               <a class="nav__logo logo">
                 <picture>
@@ -33,20 +34,13 @@
               </a>
               <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>
-            <ul>
-              <li>
-                <a href="#advantages">Преимущества</a>
-              </li>
-              <li>
-                <a href="">Направления</a>
-              </li>
-              <li>
-                <a href="#cruises">Ближайшие круизы</a>
-              </li>
-              <li>
-                <a href="#contacts">Контакты</a>
-              </li>
+            <ul class="nav__list">
+              <li><a class="scroll-to" href="#advantages">Преимущества</a></li>
+              <li><a class="scroll-to" href="">Направления</a></li>
+              <li><a class="scroll-to" href="#cruises">Ближайшие круизы</a></li>
+              <li><a class="scroll-to" href="#contacts">Контакты</a></li>
             </ul>
+            </div>
           </nav>
         </div>
       </header>
@@ -66,7 +60,7 @@
                 <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли,где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
               </div>
               <picture>
-                <!--<source type="image/webp" srcset="img/content/promo-image.webp 1x, img/content/promo-image@2x.webp 2x"> -->
+                <!--<source type="image/webp" srcset="img/content/promo-image.webp 1x, img/content/promo-image@2x.webp 2x">-->
                 <img src="img/content/promo-image.jpg" width="290" height="186" srcset="img/content/promo-image@2x.jpg 2x" alt="Фото пингвинов">
               </picture>
             </div>
@@ -127,13 +121,13 @@
                 <h4>Круиз "Атлантис"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
-                  <p>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</p>
+                    <p>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</p>
                   <h5>Порт отправления</h5>
-                  <p>Ушуайя</p>
+                    <p>Ушуайя</p>
                   <h5>Продолжительность</h5>
-                  <p>15 дней</p>
+                    <p>15 дней</p>
                   <h5>Цена</h5>
-                  <p>от 14500 $</p>
+                    <p>от 14500 $</p>
                 </div>
                 <a class="cruises__link" href="#">Забронировать</a>
               </li>
@@ -265,18 +259,10 @@
             </a>
             <div class="footer__menu menu">
               <ul>
-                <li>
-                  <a href="#advantages">Преимущества</a>
-                </li>
-                <li>
-                  <a href="">Направления</a>
-                </li>
-                <li>
-                  <a href="#cruises">Ближайшие круизы</a>
-                </li>
-                <li>
-                  <a href="#contacts">Контакты</a>
-                </li>
+                <li><a class="scroll-to" href="#advantages">Преимущества</a></li>
+                <li><a class="scroll-to" href="">Направления</a></li>
+                <li><a class="scroll-to" href="#cruises">Ближайшие круизы</a></li>
+                <li><a class="scroll-to" href="#contacts">Контакты</a></li>
               </ul>
             </div>
             <div class="footer__social social">

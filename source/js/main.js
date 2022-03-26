@@ -1,26 +1,43 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
-// ---------------------------------
+const nav = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav__toggle');
+const anchors = document.querySelectorAll('.scroll-to');
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
+  nav.classList.remove('nav--nojs');
+
+  navToggle.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (nav.classList.contains('nav--closed')) {
+      nav.classList.remove('nav--closed');
+      nav.classList.add('nav--opened');
+    } else {
+      nav.classList.add('nav--closed');
+      nav.classList.remove('nav--opened');
+    }
+  });
 
   iosVhFix();
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      });
+    }
+
     initModals();
   });
 });
-
-// ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
 

@@ -1,9 +1,8 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
   min-height: 38px;
   margin-top: 35px;
-  background-color: transparent;
+  width: inherit;
 
   @include vp-1365 {
     min-height: 20px;
@@ -12,33 +11,101 @@
   }
 
   @include vp-767 {
-    background-color: $color-alice-blue;
-    display: block;
-    margin: 0 -15px 0 20px;
-    min-height: 280px;
+    margin-top: 0;
   }
 }
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: inherit;
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
 
 .nav__menu {
   @include vp-767 {
     display: flex;
-    padding-top: 20px;
+    padding-left: 15px;
+    position: relative;
   }
 }
 
-.nav--opened {
+.nav__logo {
+  @include vp-767 {
+    position: absolute;
+    z-index: 100;
+    margin-top: 20px;
+  }
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    margin: 0 0 43px;
+    padding-top: 85px;
+    flex-direction: column;
+    background-color: $color-alice-blue;
+    width: 285px;
+  }
+}
+
+.nav ul a {
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-alice-blue;
+  display: block;
+  padding: 9px 0;
+  padding-left: 33px;
+
+  @include vp-1365 {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+    padding-left: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-tangaroa;
+    margin-bottom: 25px;
+  }
+}
+
+.nav--opened .nav__wrapper {
   @include vp-767 {
     position: absolute;
     z-index: 10;
-    width: 89%;
     background-color: $color-alice-blue;
+    margin: 0 -15px 0 20px;
+    padding-top: 20px;
+    min-height: 100vh;
   }
 }
 
-.nav--opened .nav__logo img {
+.nav--opened .nav__logo {
   @include vp-767 {
-    margin-left: 15px;
-    fill: $color-tangaroa;
+    margin-top: 0;
+    background-image: url("../img/svg/logo-mobile-nav.svg");
+    padding-left: 42px;
+  }
+}
+
+.nav--closed .nav__logo {
+  @include vp-767 {
+    margin-top: 0;
+    left: 0;
   }
 }
 
@@ -64,7 +131,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 25px;
+    top: 5px;
     right: 15px;
     width: 20px;
     height: 2px;
@@ -92,54 +159,22 @@
   box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
 }
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-
+.nav--closed .nav__menu {
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-
-    .nav--closed {
-      display: none;
-    }
-
-    .nav--opened {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 10;
-      min-height: 100vh;
-    }
+    margin-top: 20px;
+    width: 290px;
   }
 }
 
-.nav ul a {
-  line-height: 20px;
-  font-weight: 500;
-  color: $color-alice-blue;
-  display: block;
-  padding: 9px 0;
-  padding-left: 33px;
-
-  @include vp-1365 {
-    font-size: 14px;
-    line-height: 17px;
-    padding: 0;
-    padding-left: 24px;
-  }
-
+.nav--closed .nav__list {
   @include vp-767 {
-    font-size: 12px;
-    line-height: 15px;
-    color: $color-tangaroa;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 25px;
+    display: none;
+  }
+}
+
+.nav--nojs {
+  @include vp-767 {
+    position: relative;
   }
 }
 
@@ -147,8 +182,14 @@
   display: none;
 }
 
+.nav--nojs .nav__wrapper {
+  @include vp-767 {
+    position: static;
+    margin: 0;
+  }
+}
 
-.nav--nojs .nav {
-  position: static;
-  order: 0;
+.nav--nojs .nav__logo {
+  background-image: url("../img/svg/logo-mobile-nav.svg");
+  padding-left: 42px;
 }

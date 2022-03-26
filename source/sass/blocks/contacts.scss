@@ -40,12 +40,12 @@
   width: 560px;
   height: 306px;
   position: relative;
-  background-image: url("../img/content/map-mobile.png");
+  background-image: url("../img/content/map-image.png");
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/content/map-mobile@2x.jpg");
+    background-image: url("../img/content/map-image@2x.png");
     background-size: 560px auto;
   }
 
@@ -63,13 +63,11 @@
   @include vp-1365 {
     width: 324px;
     height: 335px;
-    background-image: url("../img/content/map-tablet.png");
   }
 
   @include vp-767 {
     width: 290px;
     height: 316px;
-    background-image: url("../img/content/map-mobile.png");
     order: 2;
   }
 }

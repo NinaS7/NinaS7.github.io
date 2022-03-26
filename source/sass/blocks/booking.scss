@@ -162,12 +162,12 @@
   cursor: pointer;
 }
 
-.booking__checkbox input:checked:after {
+.booking__checkbox input:checked::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 6px;
-  left: 6px;
+  left: -15px;
   top: 7px;
   background-image: url("../img/svg/tick.svg");
   background-repeat: no-repeat;

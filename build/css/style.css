@@ -686,21 +686,45 @@ button,
 
 .header {
   width: 100%;
-  min-height: 73px;
-  position: absolute;
   background-color: transparent;
 }
 
 .nav {
+  position: absolute;
+  min-height: 38px;
+  margin-top: 35px;
+  width: inherit;
+}
+
+.nav__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 38px;
-  margin-top: 35px;
-  background-color: transparent;
+  position: absolute;
+  width: inherit;
+}
+
+.nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul a {
+  line-height: 20px;
+  font-weight: 500;
+  color: #f9fbfd;
+  display: block;
+  padding: 9px 0;
+  padding-left: 33px;
 }
 
 .nav__toggle {
@@ -711,7 +735,7 @@ button,
 .nav--opened .nav__toggle::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 5px;
   right: 15px;
   width: 20px;
   height: 2px;
@@ -744,35 +768,13 @@ button,
   box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
 }
 
-.nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.nav ul a {
-  line-height: 20px;
-  font-weight: 500;
-  color: #f9fbfd;
-  display: block;
-  padding: 9px 0;
-  padding-left: 33px;
-}
-
 .nav--nojs .nav__toggle {
   display: none;
 }
 
-.nav--nojs .nav {
-  position: static;
-  -webkit-box-ordinal-group: 1;
-  -ms-flex-order: 0;
-  order: 0;
+.nav--nojs .nav__logo {
+  background-image: url("../img/svg/logo-mobile-nav.svg");
+  padding-left: 42px;
 }
 
 .logo {
@@ -1182,12 +1184,12 @@ button,
   cursor: pointer;
 }
 
-.booking__checkbox input:checked:after {
+.booking__checkbox input:checked::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 6px;
-  left: 6px;
+  left: -15px;
   top: 7px;
   background-image: url("../img/svg/tick.svg");
   background-repeat: no-repeat;
@@ -1234,7 +1236,7 @@ button,
   width: 560px;
   height: 306px;
   position: relative;
-  background-image: url("../img/content/map-mobile.png");
+  background-image: url("../img/content/map-image.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1368,10 +1370,6 @@ button,
 
   .container {
     width: 678px;
-  }
-
-  .header {
-    min-height: 50px;
   }
 
   .nav {
@@ -1588,7 +1586,6 @@ button,
   .contacts__map {
     width: 324px;
     height: 335px;
-    background-image: url("../img/content/map-tablet.png");
   }
 
   .contacts__info b {
@@ -1647,34 +1644,70 @@ button,
     width: 290px;
   }
 
-  .header {
-    min-height: 42px;
+  .nav {
+    margin-top: 0;
   }
 
-  .nav {
-    background-color: #f9fbfd;
-    display: block;
-    margin: 0 -15px 0 20px;
-    min-height: 280px;
+  .nav__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .nav__menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 20px;
+    padding-left: 15px;
+    position: relative;
   }
 
-  .nav--opened {
+  .nav__logo {
+    position: absolute;
+    z-index: 100;
+    margin-top: 20px;
+  }
+
+  .nav ul {
+    margin: 0 0 43px;
+    padding-top: 85px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #f9fbfd;
+    width: 285px;
+  }
+
+  .nav ul a {
+    font-size: 18px;
+    line-height: 22px;
+    color: #011c40;
+    margin-bottom: 25px;
+  }
+
+  .nav--opened .nav__wrapper {
     position: absolute;
     z-index: 10;
-    width: 89%;
     background-color: #f9fbfd;
+    margin: 0 -15px 0 20px;
+    padding-top: 20px;
+    min-height: 100vh;
   }
 
-  .nav--opened .nav__logo img {
-    margin-left: 15px;
-    fill: #011c40;
+  .nav--opened .nav__logo {
+    margin-top: 0;
+    background-image: url("../img/svg/logo-mobile-nav.svg");
+    padding-left: 42px;
+  }
+
+  .nav--closed .nav__logo {
+    margin-top: 0;
+    left: 0;
   }
 
   .nav__toggle {
@@ -1690,36 +1723,22 @@ button,
     border: none;
   }
 
-  .nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-top: 40px;
+  .nav--closed .nav__menu {
+    margin-top: 20px;
+    width: 290px;
   }
 
-  .nav ul .nav--closed {
+  .nav--closed .nav__list {
     display: none;
   }
 
-  .nav ul .nav--opened {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    min-height: 100vh;
+  .nav--nojs {
+    position: relative;
   }
 
-  .nav ul a {
-    font-size: 12px;
-    line-height: 15px;
-    color: #011c40;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 25px;
+  .nav--nojs .nav__wrapper {
+    position: static;
+    margin: 0;
   }
 
   .logo {
@@ -1918,7 +1937,6 @@ button,
   .contacts__map {
     width: 290px;
     height: 316px;
-    background-image: url("../img/content/map-mobile.png");
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -2006,7 +2024,7 @@ button,
   }
 
   .contacts__map {
-    background-image: url("../img/content/map-mobile@2x.jpg");
+    background-image: url("../img/content/map-image@2x.png");
     background-size: 560px auto;
   }
 }
