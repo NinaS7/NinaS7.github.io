@@ -5,7 +5,6 @@
   justify-content: space-between;
   min-height: 100vh;
   overflow: hidden;
-  max-width: 1366px;
   margin: 0 auto;
   background-color: $color-alice-blue;
 
@@ -16,11 +15,6 @@
 
   main {
     flex-grow: 1;
-  }
-
-  @include vp-1365 {
-    max-width: 768px;
-    background-color: $color-alice-blue;
   }
 }
 

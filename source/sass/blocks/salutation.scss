@@ -1,5 +1,4 @@
 .salutation {
-  width: 1366px;
   height: 650px;
   background-color: $color-sail;
   background-image: url("../img/content/back-salutation.jpg");
@@ -8,22 +7,17 @@
   top: 0;
   margin-bottom: 120px;
 
-  //@media (min-resolution: $retina-dppx) {
-  //  background-image: url("../img/content/back-salutation-desktop@2x.jpg");
-  //  background-size: 1200px auto;
-  //}
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/back-salutation@2x.jpg");
+  }
 
   @include vp-1365 {
-    width: 768px;
     height: 638px;
-    object-fit: cover;
     margin-bottom: 91px;
   }
 
   @include vp-767 {
-    width: 320px;
     height: 500px;
-    object-fit: cover;
     margin: 0 auto;
     margin-bottom: 56px;
   }

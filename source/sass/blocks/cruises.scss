@@ -54,7 +54,7 @@
 }
 
 .cruises li {
-  height: 386px;
+  min-height: 386px;
   width: 260px;
   padding: 30px;
   padding-bottom: 23px;
@@ -64,10 +64,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media (min-resolution: $retina-dppx) {
-    //background-size: 260px auto;
-  }
 
   @include vp-1365 {
     padding: 35px;
@@ -185,6 +181,11 @@
   background-color: $color-alice-blue;
   text-align: center;
   padding: 10px 0;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 
   @include vp-1365 {
     width: 239px;

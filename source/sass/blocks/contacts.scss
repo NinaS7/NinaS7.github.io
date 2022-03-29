@@ -119,6 +119,10 @@
   position: relative;
   display: block;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   &::before {
     content: "";
     position: absolute;

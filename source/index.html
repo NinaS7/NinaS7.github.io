@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserratregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
@@ -57,12 +58,19 @@
             <div class="promo__info">
               <div>
                 <h3>Путешествие <br>на край Земли</h3>
-                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли,где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
               </div>
               <picture>
+
+                <!--<source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo-image-mobile.webp 1x, img/content/promo-image-mobile@2x.webp 2x">-->
+                <!--<source type="image/webp" media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.webp 1x, img/content/promo-image-tablet@2x.webp 2x">-->
+                <!--<source type="image/webp" srcset="img/content/promo-image-desktop.webp 1x, img/content/promo-image-desktop@2x.webp 2x">-->
                 <!-- 1x: 290px; 2x: 580px -->
-                <!--<source type="image/webp" srcset="img/content/promo-image.webp 1x, img/content/promo-image@2x.webp 2x">-->
-                <img src="img/content/promo-image.jpg" width="290" height="186" srcset="img/content/promo-image@2x.jpg 2x" alt="Фото пингвинов">
+                <source media="(max-width: 767px)" srcset="img/content/promo-image-mobile.jpg 1x, img/content/promo-image-mobile@2x.jpg 2x">
+                <!-- 1x: 324px; 2x: 648px -->
+                <source media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.jpg 1x, img/content/promo-image-tablet@2x.jpg 2x">
+                <!-- 1x: 560px; 2x: 1120px -->
+                <img src="img/content/promo-image-desktop.jpg" width="290" height="186" srcset="img/content/promo-image-desktop@2x.jpg 2x" alt="Фото пингвинов">
               </picture>
             </div>
           </div>
@@ -73,7 +81,7 @@
             <ul>
               <li class="advantages__liner">
                 <h4>Небольшой круизный&nbsp;лайнер</h4>
-                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+                <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
               <li class="advantages__inclusive">
                 <h4>Система <br>все&nbsp;включено</h4>
@@ -81,7 +89,7 @@
               </li>
               <li class="advantages__zodiac">
                 <h4>Экскурсионные <br>туры на Zodiac</h4>
-                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются <br>на оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
+                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
               </li>
             </ul>
           </div>
@@ -210,7 +218,7 @@
             <div class="booking__group">
               <div class="booking__info">
                 <h3>Раннее бронирование</h3>
-                <p>Забронируйте тур <br>за 3-6 месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
+                <p>Забронируйте тур <br>за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
               </div>
               <div class="booking__form">
                 <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время</p>
@@ -224,10 +232,10 @@
                   <label>
                     <input type="email" name="mail" placeholder="Email">
                   </label>
-                  <label class="booking__checkbox">
-                    <input class="visually-hidden"  type="checkbox" name="info" checked>
-                    <span>Я согласен на обработку моих персональных данных</span>
-                  </label>
+                  <div class="booking__checkbox">
+                    <input class="visually-hidden booking__checkbox-input" id="tick" type="checkbox" name="info" checked>
+                    <label for="tick">Я согласен на обработку моих персональных данных</label>
+                  </div>
                   <button class="booking__button" type="submit">Оставить заявку</button>
                 </form>
               </div>

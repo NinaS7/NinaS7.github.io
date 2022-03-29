@@ -12,6 +12,7 @@
 
   @include vp-767 {
     margin-top: 0;
+    width: 100%;
   }
 }
 
@@ -44,7 +45,7 @@
   }
 }
 
-.nav ul {
+.nav__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -60,19 +61,24 @@
   }
 }
 
-.nav ul a {
+.nav__list a {
   line-height: 20px;
   font-weight: 500;
   color: $color-alice-blue;
   display: block;
   padding: 9px 0;
-  padding-left: 33px;
+  margin-left: 33px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 
   @include vp-1365 {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
-    padding-left: 24px;
+    margin-left: 24px;
   }
 
   @include vp-767 {
@@ -88,9 +94,12 @@
     position: absolute;
     z-index: 10;
     background-color: $color-alice-blue;
-    margin: 0 -15px 0 20px;
+    //margin: 0 -15px 0 20px;
+    margin: 0;
     padding-top: 20px;
     min-height: 100vh;
+    width: 89%;
+    right: 0;
   }
 }
 

@@ -70,7 +70,7 @@
 .promo img {
   width: 560px;
   height: 301px;
-  object-fit: cover;
+  align-self: center;
 
   @include vp-1365 {
     width: 364px;

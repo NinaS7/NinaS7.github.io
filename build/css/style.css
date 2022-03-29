@@ -610,7 +610,6 @@ button,
   justify-content: space-between;
   min-height: 100vh;
   overflow: hidden;
-  max-width: 1366px;
   margin: 0 auto;
   background-color: #f9fbfd;
 }
@@ -707,7 +706,7 @@ button,
   width: inherit;
 }
 
-.nav ul {
+.nav__list {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,13 +717,18 @@ button,
   padding: 0;
 }
 
-.nav ul a {
+.nav__list a {
   line-height: 20px;
   font-weight: 500;
   color: #f9fbfd;
   display: block;
   padding: 9px 0;
-  padding-left: 33px;
+  margin-left: 33px;
+}
+
+.nav__list a:hover,
+.nav__list a:focus {
+  opacity: 0.5;
 }
 
 .nav__toggle {
@@ -780,7 +784,6 @@ button,
 .logo {
   width: 70px;
   height: 38px;
-  cursor: pointer;
 }
 
 .main {
@@ -788,7 +791,6 @@ button,
 }
 
 .salutation {
-  width: 1366px;
   height: 650px;
   background-color: #9fc5e8;
   background-image: url("../img/content/back-salutation.jpg");
@@ -851,13 +853,13 @@ button,
 .promo img {
   width: 560px;
   height: 301px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .advantages {
-  width: 1366px;
-  height: 562px;
+  min-height: 562px;
   background-color: #9fc5e8;
   background-image: url("../img/content/back-advantages.jpg");
   background-position: center;
@@ -987,7 +989,7 @@ button,
 }
 
 .cruises li {
-  height: 386px;
+  min-height: 386px;
   width: 260px;
   padding: 30px;
   padding-bottom: 23px;
@@ -1073,6 +1075,11 @@ button,
   padding: 10px 0;
 }
 
+.cruises__link:hover,
+.cruises__link:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 .cruises li:hover {
   padding: 28px 25px 33px;
   -webkit-box-orient: vertical;
@@ -1099,8 +1106,7 @@ button,
   min-height: 555px;
   margin-bottom: 120px;
   background-color: #9fc5e8;
-  background-image: url("../img/content/back-booking.jpg");
-  background-position: 50% -500px;
+  background-image: url("../img/content/back-booking-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1113,6 +1119,8 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .booking__info h3 {
@@ -1135,7 +1143,7 @@ button,
 
 .booking__form {
   width: 404px;
-  height: 455px;
+  min-height: 455px;
   color: #f9fbfd;
   background-color: #011c40;
   padding: 50px;
@@ -1166,14 +1174,24 @@ button,
 .booking__checkbox {
   font-size: 10px;
   line-height: 13px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+}
+
+.booking__checkbox label {
   position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 13px;
+  padding-top: 2px;
   padding-left: 23px;
 }
 
-.booking__checkbox::before {
+.booking__checkbox-input:hover + label,
+.booking__checkbox-input:focus + label {
+  opacity: 0.7;
+}
+
+.booking__checkbox-input + label::before {
   content: "";
   position: absolute;
   width: 19px;
@@ -1184,22 +1202,20 @@ button,
   cursor: pointer;
 }
 
-.booking__checkbox input:checked::after {
+.booking__checkbox-input:checked + label::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 6px;
-  left: -15px;
-  top: 7px;
-  background-image: url("../img/svg/tick.svg");
+  width: 19px;
+  height: 19px;
+  left: 1px;
+  top: 0;
+  background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.booking__checkbox span {
-  font-size: 10px;
-  line-height: 13px;
-  padding-top: 2px;
+.booking__checkbox-input:checked:disabled::before {
+  cursor: default;
 }
 
 .booking__button {
@@ -1213,6 +1229,10 @@ button,
   padding: 12px 10px 11px;
   margin-top: 32px;
   cursor: pointer;
+}
+
+.booking__button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .contacts {
@@ -1283,6 +1303,10 @@ button,
   display: block;
 }
 
+.contacts__info a:hover {
+  opacity: 0.7;
+}
+
 .contacts__info a::before {
   content: "";
   position: absolute;
@@ -1329,6 +1353,11 @@ button,
   padding-left: 33px;
 }
 
+.menu a:hover,
+.menu a:focus {
+  opacity: 0.5;
+}
+
 .social ul {
   display: -ms-grid;
   display: grid;
@@ -1350,6 +1379,11 @@ button,
   fill: #f9fbfd;
 }
 
+.social a:hover,
+.social a:focus {
+  opacity: 0.5;
+}
+
 .social__link--facebook {
   display: block;
   padding-left: 9px;
@@ -1363,11 +1397,6 @@ button,
 } */
 
 @media (max-width: 1365px) {
-  .wrapper {
-    max-width: 768px;
-    background-color: #f9fbfd;
-  }
-
   .container {
     width: 678px;
   }
@@ -1378,11 +1407,11 @@ button,
     margin-top: 32px;
   }
 
-  .nav ul a {
+  .nav__list a {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
-    padding-left: 24px;
+    margin-left: 24px;
   }
 
   .logo {
@@ -1391,10 +1420,7 @@ button,
   }
 
   .salutation {
-    width: 768px;
     height: 638px;
-    -o-object-fit: cover;
-    object-fit: cover;
     margin-bottom: 91px;
   }
 
@@ -1443,7 +1469,6 @@ button,
 
   .advantages {
     min-height: 588px;
-    width: 768px;
     margin-bottom: 90px;
     padding: 0 0 100px;
   }
@@ -1538,7 +1563,7 @@ button,
   .booking {
     min-height: 805px;
     margin-bottom: 100px;
-    background-position: center;
+    background-image: url("../img/content/back-booking-tablet.jpg");
   }
 
   .booking__group {
@@ -1562,10 +1587,6 @@ button,
   .booking__info p {
     text-align: center;
     margin: 0 0 53px 32px;
-  }
-
-  .booking__checkbox {
-    padding-top: 2px;
   }
 
   .contacts {
@@ -1637,6 +1658,10 @@ button,
   .cruises li {
     background-size: 309px auto;
   }
+
+  .booking {
+    background-image: url("../img/content/back-booking-tablet@2x.jpg");
+  }
 }
 
 @media (max-width: 767px) {
@@ -1646,6 +1671,7 @@ button,
 
   .nav {
     margin-top: 0;
+    width: 100%;
   }
 
   .nav__wrapper {
@@ -1672,7 +1698,7 @@ button,
     margin-top: 20px;
   }
 
-  .nav ul {
+  .nav__list {
     margin: 0 0 43px;
     padding-top: 85px;
     -webkit-box-orient: vertical;
@@ -1683,7 +1709,7 @@ button,
     width: 285px;
   }
 
-  .nav ul a {
+  .nav__list a {
     font-size: 18px;
     line-height: 22px;
     color: #011c40;
@@ -1694,9 +1720,11 @@ button,
     position: absolute;
     z-index: 10;
     background-color: #f9fbfd;
-    margin: 0 -15px 0 20px;
+    margin: 0;
     padding-top: 20px;
     min-height: 100vh;
+    width: 89%;
+    right: 0;
   }
 
   .nav--opened .nav__logo {
@@ -1747,10 +1775,7 @@ button,
   }
 
   .salutation {
-    width: 320px;
     height: 500px;
-    -o-object-fit: cover;
-    object-fit: cover;
     margin: 0 auto;
     margin-bottom: 56px;
   }
@@ -1796,8 +1821,6 @@ button,
 
   .advantages {
     min-height: 997px;
-    width: 320px;
-    background-position: center;
     margin: 0 auto;
     margin-bottom: 56px;
     padding-bottom: 65px;
@@ -1865,9 +1888,9 @@ button,
 
   .booking {
     min-height: 760px;
-    width: 320px;
     margin: 0 auto;
     margin-bottom: 59px;
+    background-image: url("../img/content/back-booking-mobile.jpg");
   }
 
   .booking__group {
@@ -1910,13 +1933,12 @@ button,
 
   .booking__checkbox {
     line-height: 12px;
-    padding-top: 0;
-    padding-left: 28px;
   }
 
-  .booking__checkbox span {
+  .booking__checkbox label {
+    padding-top: 0;
+    padding-left: 28px;
     line-height: 12px;
-    padding: 0;
     width: 158px;
   }
 
@@ -1985,10 +2007,19 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .booking {
+    background-image: url("../img/content/back-booking-mobile@2x.jpg");
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .salutation {
+    background-image: url("../img/content/back-salutation@2x.jpg");
+  }
+
   .advantages {
     background-image: url("../img/content/back-advantages@2x.jpg");
-    background-size: 1366px auto;
   }
 
   .cruises__astoria {

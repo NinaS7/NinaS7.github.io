@@ -2,22 +2,29 @@
   min-height: 555px;
   margin-bottom: 120px;
   background-color: $color-sail;
-  background-image: url("../img/content/back-booking.jpg");
-  background-position: 50% -500px;
+  background-image: url("../img/content/back-booking-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include vp-1365 {
     min-height: 805px;
     margin-bottom: 100px;
-    background-position: center;
+    background-image: url("../img/content/back-booking-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/content/back-booking-tablet@2x.jpg");
+    }
   }
 
   @include vp-767 {
     min-height: 760px;
-    width: 320px;
     margin: 0 auto;
     margin-bottom: 59px;
+    background-image: url("../img/content/back-booking-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/content/back-booking-mobile@2x.jpg");
+    }
   }
 }
 
@@ -25,6 +32,7 @@
   padding: 50px 60px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include vp-1365 {
     padding: 87px 0;
@@ -93,7 +101,7 @@
 
 .booking__form {
   width: 404px;
-  height: 455px;
+  min-height: 455px;
   color: $color-alice-blue;
   background-color: $color-tangaroa;
   padding: 50px;
@@ -136,22 +144,35 @@
 .booking__checkbox {
   font-size: 10px;
   line-height: 13px;
-  display: flex;
-  position: relative;
-  padding-left: 23px;
-
-  @include vp-1365 {
-    padding-top: 2px;
-  }
 
   @include vp-767 {
     line-height: 12px;
-    padding-top: 0;
-    padding-left: 28px;
   }
 }
 
-.booking__checkbox::before {
+.booking__checkbox label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 13px;
+  padding-top: 2px;
+  padding-left: 23px;
+
+  @include vp-767 {
+    padding-top: 0;
+    padding-left: 28px;
+    line-height: 12px;
+    width: 158px;
+  }
+}
+
+.booking__checkbox-input:hover + label,
+.booking__checkbox-input:focus + label {
+  opacity: 0.7;
+}
+
+.booking__checkbox-input + label::before {
   content: "";
   position: absolute;
   width: 19px;
@@ -162,28 +183,20 @@
   cursor: pointer;
 }
 
-.booking__checkbox input:checked::after {
+.booking__checkbox-input:checked + label::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 6px;
-  left: -15px;
-  top: 7px;
-  background-image: url("../img/svg/tick.svg");
+  width: 19px;
+  height: 19px;
+  left: 1px;
+  top: 0;
+  background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.booking__checkbox span {
-  font-size: 10px;
-  line-height: 13px;
-  padding-top: 2px;
-
-  @include vp-767 {
-    line-height: 12px;
-    padding: 0;
-    width: 158px;
-  }
+.booking__checkbox-input:checked:disabled::before {
+  cursor: default;
 }
 
 .booking__button {
@@ -197,6 +210,10 @@
   padding: 12px 10px 11px;
   margin-top: 32px;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 
   @include vp-767 {
     margin-top: 25px;

@@ -32,6 +32,11 @@
 .social a {
   fill: $color-alice-blue;
 
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
   @include vp-767 {
     padding-right: 7px;
     width: 16px;
