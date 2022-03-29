@@ -61,10 +61,9 @@
                 <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
               </div>
               <picture>
-
-                <!--<source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo-image-mobile.webp 1x, img/content/promo-image-mobile@2x.webp 2x">-->
-                <!--<source type="image/webp" media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.webp 1x, img/content/promo-image-tablet@2x.webp 2x">-->
-                <!--<source type="image/webp" srcset="img/content/promo-image-desktop.webp 1x, img/content/promo-image-desktop@2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo-image-mobile.webp 1x, img/content/promo-image-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.webp 1x, img/content/promo-image-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/promo-image-desktop.webp 1x, img/content/promo-image-desktop@2x.webp 2x">
                 <!-- 1x: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/content/promo-image-mobile.jpg 1x, img/content/promo-image-mobile@2x.jpg 2x">
                 <!-- 1x: 324px; 2x: 648px -->
@@ -224,16 +223,16 @@
                 <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время</p>
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <label>
-                    <input type="text" name="name" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                   </label>
                   <label>
-                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="number" name="phone" placeholder="Телефон" required>
                   </label>
                   <label>
-                    <input type="email" name="mail" placeholder="Email">
+                    <input type="email" name="mail" placeholder="Email" required>
                   </label>
                   <div class="booking__checkbox">
-                    <input class="visually-hidden booking__checkbox-input" id="tick" type="checkbox" name="info" checked>
+                    <input class="visually-hidden booking__checkbox-input" id="tick" type="checkbox" name="info" checked required>
                     <label for="tick">Я согласен на обработку моих персональных данных</label>
                   </div>
                   <button class="booking__button" type="submit">Оставить заявку</button>
@@ -248,7 +247,7 @@
             <div class="contacts__info">
               <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1647190495270!5m2!1sru!2sru" width="290" height="316" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               <div>
-                <b>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.</b>
+                <b>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</b>
                 <p>г. Санкт Петербург,<br>ул. Большая&nbsp;Конюшенная, 19/8</p>
                 <a href="tel:88002000000">8-800-200-00-00</a>
               </div>

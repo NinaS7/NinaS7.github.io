@@ -1,14 +1,14 @@
 .container {
-  width: 1160px;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
 
   @include vp-1365 {
-    width: 678px;
+    width: 89%;
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 91%;
   }
 
   /* @include vp-1439 {

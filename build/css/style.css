@@ -666,7 +666,7 @@ button,
 }
 
 .container {
-  width: 1160px;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
   /* @include vp-1439 {
@@ -692,7 +692,7 @@ button,
   position: absolute;
   min-height: 38px;
   margin-top: 35px;
-  width: inherit;
+  width: 85%;
 }
 
 .nav__wrapper {
@@ -703,7 +703,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
-  width: inherit;
+  width: 100%;
 }
 
 .nav__list {
@@ -998,7 +998,8 @@ button,
 
 .cruises li {
   min-height: 386px;
-  width: 260px;
+  width: 100%;
+  margin: 0 auto;
   padding: 30px;
   padding-bottom: 23px;
   display: -webkit-box;
@@ -1072,7 +1073,7 @@ button,
 }
 
 .cruises__link {
-  width: 210px;
+  width: 100%;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -1181,6 +1182,18 @@ button,
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 20px;
+}
+
+.booking input:invalid {
+  color: red;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.booking input:hover,
+.booking input:focus {
+  background-color: #fff5ee;
+  border: none;
 }
 
 .booking__checkbox {
@@ -1418,13 +1431,14 @@ button,
 
 @media (max-width: 1365px) {
   .container {
-    width: 678px;
+    width: 89%;
   }
 
   .nav {
     min-height: 20px;
     padding: 0;
     margin-top: 32px;
+    width: 89%;
   }
 
   .nav__list a {
@@ -1569,11 +1583,6 @@ button,
   .cruises li {
     padding: 35px;
     padding-bottom: 28px;
-    width: 309px;
-  }
-
-  .cruises__link {
-    width: 239px;
   }
 
   .cruises li:hover {
@@ -1675,10 +1684,6 @@ button,
 }
 
 @media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1365px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1365px) and (min-resolution: 2dppx) {
-  .cruises li {
-    background-size: 309px auto;
-  }
-
   .booking {
     background-image: url("../img/content/back-booking-tablet@2x.jpg");
   }
@@ -1686,7 +1691,7 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    width: 290px;
+    width: 91%;
   }
 
   .nav {
@@ -1773,7 +1778,7 @@ button,
 
   .nav--closed .nav__menu {
     margin-top: 20px;
-    width: 290px;
+    width: 91%;
   }
 
   .nav--closed .nav__list {
@@ -1894,12 +1899,7 @@ button,
   }
 
   .cruises li {
-    width: 270px;
     padding: 16px 25px;
-  }
-
-  .cruises__link {
-    width: 220px;
   }
 
   .cruises li:hover {
@@ -1959,7 +1959,6 @@ button,
     padding-top: 0;
     padding-left: 28px;
     line-height: 12px;
-    width: 158px;
   }
 
   .booking__button {

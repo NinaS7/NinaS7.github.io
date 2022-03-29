@@ -55,7 +55,8 @@
 
 .cruises li {
   min-height: 386px;
-  width: 260px;
+  width: 100%;
+  margin: 0 auto;
   padding: 30px;
   padding-bottom: 23px;
   display: flex;
@@ -68,15 +69,9 @@
   @include vp-1365 {
     padding: 35px;
     padding-bottom: 28px;
-    width: 309px;
-
-    @media (min-resolution: $retina-dppx) {
-      background-size: 309px auto;
-    }
   }
 
   @include vp-767 {
-    width: 270px;
     padding: 16px 25px;
   }
 }
@@ -172,7 +167,7 @@
 }
 
 .cruises__link {
-  width: 210px;
+  width: 100%;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -186,14 +181,6 @@
   &:hover,
   &:focus {
     background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  @include vp-1365 {
-    width: 239px;
-  }
-
-  @include vp-767 {
-    width: 220px;
   }
 }
 

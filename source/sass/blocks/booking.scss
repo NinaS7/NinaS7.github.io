@@ -139,6 +139,17 @@
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 20px;
+
+  &:invalid {
+    color: red;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #fff5ee;
+    border: none;
+  }
 }
 
 .booking__checkbox {
@@ -163,7 +174,6 @@
     padding-top: 0;
     padding-left: 28px;
     line-height: 12px;
-    width: 158px;
   }
 }
 
