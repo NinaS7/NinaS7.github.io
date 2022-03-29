@@ -27,6 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
     for (let anchor of anchors) {
       anchor.addEventListener('click', function (evt) {
         evt.preventDefault();
+        nav.classList.remove('nav--opened');
+        nav.classList.add('nav--closed');
         const blockID = anchor.getAttribute('href');
         document.querySelector(blockID).scrollIntoView({
           behavior: 'smooth',

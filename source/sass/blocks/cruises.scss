@@ -181,6 +181,7 @@
   background-color: $color-alice-blue;
   text-align: center;
   padding: 10px 0;
+  user-select:none;
 
   &:hover,
   &:focus {

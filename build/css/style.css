@@ -724,6 +724,10 @@ button,
   display: block;
   padding: 9px 0;
   margin-left: 33px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav__list a:hover,
@@ -735,12 +739,16 @@ button,
   display: none;
 }
 
+.nav--opened .nav__toggle {
+  right: 15px;
+}
+
 .nav--opened .nav__toggle::before,
 .nav--opened .nav__toggle::after {
   content: "";
   position: absolute;
   top: 5px;
-  right: 15px;
+  right: 14px;
   width: 20px;
   height: 2px;
   background-color: #011c40;
@@ -1073,6 +1081,10 @@ button,
   background-color: #f9fbfd;
   text-align: center;
   padding: 10px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cruises__link:hover,
@@ -1229,6 +1241,10 @@ button,
   padding: 12px 10px 11px;
   margin-top: 32px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .booking__button:hover {
@@ -1351,6 +1367,10 @@ button,
   display: block;
   padding: 9px 0;
   padding-left: 33px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .menu a:hover,
@@ -1706,7 +1726,6 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     background-color: #f9fbfd;
-    width: 285px;
   }
 
   .nav__list a {
@@ -1714,6 +1733,7 @@ button,
     line-height: 22px;
     color: #011c40;
     margin-bottom: 25px;
+    width: 192px;
   }
 
   .nav--opened .nav__wrapper {
@@ -1745,7 +1765,7 @@ button,
     right: 0;
     z-index: 2;
     width: 24px;
-    height: 12px;
+    height: 15px;
     background-color: transparent;
     cursor: pointer;
     border: none;
