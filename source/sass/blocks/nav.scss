@@ -2,7 +2,7 @@
   position: absolute;
   min-height: 38px;
   margin-top: 35px;
-  width: 85%;
+  width: 1160px;
 
   @include vp-1365 {
     min-height: 20px;
@@ -90,6 +90,15 @@
   }
 }
 
+ .nav--opened .nav__inner {
+  @include vp-767 {
+    background-color: rgba(0, 43, 102, 0.5);
+    margin-left: -35px;
+    height: 100vh;
+    //width: 50%;
+  }
+}
+
 .nav--opened .nav__wrapper {
   @include vp-767 {
     position: absolute;
@@ -98,8 +107,10 @@
     margin: 0;
     padding-top: 20px;
     min-height: 100vh;
+    max-height: 100vh;
     width: 89%;
     right: 0;
+    overflow-y: scroll;
   }
 }
 
