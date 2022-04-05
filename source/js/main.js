@@ -20,8 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
       document.body.style.top = `-${window.scrollY}px`;
 
       document.addEventListener('click', function (evt) {
-        if (evt.target === navToggle || evt.target === navWrapper.childNodes) {
-          evt.stopPropagation();
+        evt.stopPropagation();
+        const withinBoundaries = evt.composedPath().includes(navWrapper);
+        if (withinBoundaries) {
           return;
         }
         nav.classList.remove('nav--opened');

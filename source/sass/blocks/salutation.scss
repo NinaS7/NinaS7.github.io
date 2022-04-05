@@ -1,25 +1,35 @@
 .salutation {
   height: 650px;
   background-color: $color-sail;
-  background-image: url("../img/content/back-salutation.jpg");
+  background-image: url("../img/content/back-salutation-desktop.jpg");
   background-position: center;
   background-size: cover;
   top: 0;
   margin-bottom: 120px;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/content/back-salutation@2x.jpg");
+    background-image: url("../img/content/back-salutation-desktop@2x.jpg");
   }
 
   @include vp-1365 {
     height: 638px;
     margin-bottom: 91px;
+    background-image: url("../img/content/back-salutation-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/content/back-salutation-tablet@2x.jpg");
+    }
   }
 
   @include vp-767 {
     height: 500px;
     margin: 0 auto;
     margin-bottom: 56px;
+    background-image: url("../img/content/back-salutation-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/content/back-salutation-mobile@2x.jpg");
+    }
   }
 }
 

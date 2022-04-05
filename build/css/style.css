@@ -789,7 +789,7 @@ button,
 .salutation {
   height: 650px;
   background-color: #9fc5e8;
-  background-image: url("../img/content/back-salutation.jpg");
+  background-image: url("../img/content/back-salutation-desktop.jpg");
   background-position: center;
   background-size: cover;
   top: 0;
@@ -1430,7 +1430,7 @@ button,
 
 @media (max-width: 1365px) {
   .container {
-    width: 89%;
+    width: 88.5%;
   }
 
   .nav {
@@ -1455,6 +1455,7 @@ button,
   .salutation {
     height: 638px;
     margin-bottom: 91px;
+    background-image: url("../img/content/back-salutation-tablet.jpg");
   }
 
   .salutation h2 {
@@ -1683,6 +1684,10 @@ button,
 }
 
 @media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1365px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1365px) and (min-resolution: 2dppx) {
+  .salutation {
+    background-image: url("../img/content/back-salutation-tablet@2x.jpg");
+  }
+
   .booking {
     background-image: url("../img/content/back-booking-tablet@2x.jpg");
   }
@@ -1810,6 +1815,7 @@ button,
     height: 500px;
     margin: 0 auto;
     margin-bottom: 56px;
+    background-image: url("../img/content/back-salutation-mobile.jpg");
   }
 
   .salutation h2 {
@@ -2034,6 +2040,10 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .salutation {
+    background-image: url("../img/content/back-salutation-mobile@2x.jpg");
+  }
+
   .booking {
     background-image: url("../img/content/back-booking-mobile@2x.jpg");
   }
@@ -2041,7 +2051,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .salutation {
-    background-image: url("../img/content/back-salutation@2x.jpg");
+    background-image: url("../img/content/back-salutation-desktop@2x.jpg");
   }
 
   .advantages {
