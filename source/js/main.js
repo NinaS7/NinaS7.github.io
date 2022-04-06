@@ -13,6 +13,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   navToggle.addEventListener('click', function (event) {
     event.preventDefault();
+    const getscroll = () => {
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseFloat(scrollY || '0') * -1);
+    };
     if (nav.classList.contains('nav--closed')) {
       nav.classList.remove('nav--closed');
       nav.classList.add('nav--opened');
@@ -27,15 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         nav.classList.remove('nav--opened');
         nav.classList.add('nav--closed');
+        getscroll();
       });
 
     } else {
       nav.classList.add('nav--closed');
       nav.classList.remove('nav--opened');
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseFloat(scrollY || '0') * -1);
+      getscroll();
     }
   });
 
