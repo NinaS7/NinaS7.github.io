@@ -2,9 +2,10 @@
   position: absolute;
   min-height: 38px;
   margin-top: 35px;
-  width: 1160px;
+  max-width: 1160px;
+  width: 85%;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 20px;
     padding: 0;
     margin-top: 32px;
@@ -22,6 +23,10 @@
   justify-content: space-between;
   position: absolute;
   width: 100%;
+
+  @include vp-1023 {
+    width: 99%;
+  }
 
   @include vp-767 {
     flex-direction: column;
@@ -54,7 +59,7 @@
 
   @include vp-767 {
     margin: 0 0 43px;
-    padding-top: 85px;
+    padding-top: 65px;
     flex-direction: column;
     background-color: $color-alice-blue;
   }
@@ -74,18 +79,18 @@
     opacity: 0.5;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
-    margin-left: 24px;
+    margin-left: 23px;
   }
 
   @include vp-767 {
     font-size: 18px;
     line-height: 22px;
     color: $color-tangaroa;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     width: 192px;
   }
 }
@@ -107,7 +112,7 @@
     padding-top: 20px;
     min-height: 100vh;
     max-height: 100vh;
-    width: 89%;
+    width: 93.5%;
     right: 0;
     overflow-y: scroll;
   }

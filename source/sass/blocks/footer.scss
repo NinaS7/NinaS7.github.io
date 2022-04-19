@@ -9,13 +9,13 @@
   min-height: 138px;
   padding: 50px 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 120px;
   }
 
   @include vp-767 {
     grid-template-columns: none;
-    min-height: 280px;
-    padding: 40px 0 35px;
+    min-height: 263px;
+    padding: 40px 0 41px;
   }
 }

@@ -12,7 +12,7 @@
     background-image: url("../img/content/back-advantages@2x.jpg");
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 588px;
     margin-bottom: 90px;
     padding: 0 0 100px;
@@ -34,7 +34,7 @@
   margin: 0;
   margin-bottom: 50px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 26px;
     line-height: 39px;
     padding-top: 89px;
@@ -56,7 +56,7 @@
   margin: 0;
   padding: 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     gap: 0 30px;
   }
 
@@ -71,7 +71,7 @@
   padding: 0 30px 25px;
   position: relative;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 0 15px 0 20px;
     min-height: 310px;
 
@@ -102,7 +102,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include vp-1365 {
+    @include vp-1023 {
       top: 25px;
       left: 20px;
       width: 21px;
@@ -126,7 +126,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include vp-1365 {
+    @include vp-1023 {
       top: 29px;
       left: 20px;
       width: 33px;
@@ -139,7 +139,7 @@
 .advantages__inclusive p {
   padding-right: 15px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-right: 9px;
   }
 }
@@ -155,7 +155,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     top: 32px;
     left: 20px;
     width: 38px;
@@ -167,7 +167,7 @@
 .advantages__zodiac p {
   padding-right: 50px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-right: 2px;
   }
 }
@@ -184,7 +184,7 @@
     display: none;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     line-height: 25px;
     padding-top: 70px;
     margin-bottom: 10px;

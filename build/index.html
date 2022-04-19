@@ -30,17 +30,17 @@
                   <a class="nav__logo logo">
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
-                      <source media="(max-width: 1365px)" srcset="img/svg/logo-tablet.svg">
+                      <source media="(max-width: 1024px)" srcset="img/svg/logo-tablet.svg">
                       <img src="img/svg/logo-desktop.svg" alt="Круизы в Антарктику">
                     </picture>
                   </a>
                   <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
                 </div>
                 <ul class="nav__list">
-                  <li><a class="scroll-to" href="#advantages">Преимущества</a></li>
-                  <li><a class="scroll-to" href="">Направления</a></li>
-                  <li><a class="scroll-to" href="#cruises">Ближайшие круизы</a></li>
-                  <li><a class="scroll-to" href="#contacts">Контакты</a></li>
+                  <li><a class="scroll-to" href="#advantages" tabindex="1">Преимущества</a></li>
+                  <li><a class="scroll-to" href="" tabindex="2">Направления</a></li>
+                  <li><a class="scroll-to" href="#cruises" tabindex="3">Ближайшие круизы</a></li>
+                  <li><a class="scroll-to" href="#contacts" tabindex="4">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -58,20 +58,20 @@
         <section class="promo">
           <div class="container">
             <div class="promo__info">
-              <div>
+              <div class="promo__text">
                 <h3>Путешествие <br>на край Земли</h3>
                 <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
               </div>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo-image-mobile.webp 1x, img/content/promo-image-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.webp 1x, img/content/promo-image-tablet@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/promo-image-tablet.webp 1x, img/content/promo-image-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/content/promo-image-desktop.webp 1x, img/content/promo-image-desktop@2x.webp 2x">
                 <!-- 1x: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/content/promo-image-mobile.jpg 1x, img/content/promo-image-mobile@2x.jpg 2x">
                 <!-- 1x: 324px; 2x: 648px -->
-                <source media="(max-width: 1365px)" srcset="img/content/promo-image-tablet.jpg 1x, img/content/promo-image-tablet@2x.jpg 2x">
+                <source media="(max-width: 1024px)" srcset="img/content/promo-image-tablet.jpg 1x, img/content/promo-image-tablet@2x.jpg 2x">
                 <!-- 1x: 560px; 2x: 1120px -->
-                <img src="img/content/promo-image-desktop.jpg" width="290" height="186" srcset="img/content/promo-image-desktop@2x.jpg 2x" alt="Фото пингвинов">
+                <img src="img/content/promo-image-desktop.jpg" width="560" height="301" srcset="img/content/promo-image-desktop@2x.jpg 2x" alt="Фото пингвинов">
               </picture>
             </div>
           </div>
@@ -99,7 +99,7 @@
           <div class="container">
             <h3>Ближайшие круизы</h3>
             <ul>
-              <li class="cruises__astoria">
+              <li class="cruises__astoria" tabindex="10">
                 <h4>Круиз "Астория"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -111,9 +111,9 @@
                   <h5>Цена</h5>
                     <p>от 11500 $</p>
                 </div>
-                <a class="cruises__link" href="#">Забронировать</a>
+                <a class="cruises__link" href="#" tabindex="11">Забронировать</a>
               </li>
-              <li class="cruises__eline">
+              <li class="cruises__eline" tabindex="12">
                 <h4>Круиз "Элайн"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -124,10 +124,10 @@
                     <p>20 дней</p>
                   <h5>Цена</h5>
                     <p>от 14500 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="13">Забронировать</a>
               </li>
-              <li class="cruises__atlantis">
+              <li class="cruises__atlantis" tabindex="14">
                 <h4>Круиз "Атлантис"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -139,9 +139,9 @@
                   <h5>Цена</h5>
                     <p>от 14500 $</p>
                 </div>
-                <a class="cruises__link" href="#">Забронировать</a>
+                <a class="cruises__link" href="#" tabindex="15">Забронировать</a>
               </li>
-              <li class="cruises__odysseus">
+              <li class="cruises__odysseus" tabindex="16">
                 <h4>Круиз "Одиссей"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -152,10 +152,10 @@
                     <p>13 дней</p>
                   <h5>Цена</h5>
                     <p>от 9700 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="17">Забронировать</a>
               </li>
-              <li class="cruises__olympia">
+              <li class="cruises__olympia" tabindex="18">
                 <h4>Круиз "Олимпия"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -166,10 +166,10 @@
                     <p>21 день</p>
                   <h5>Цена</h5>
                     <p>от 18600 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="19">Забронировать</a>
               </li>
-              <li class="cruises__aurora">
+              <li class="cruises__aurora" tabindex="20">
                 <h4>Круиз "Аврора"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -180,10 +180,10 @@
                     <p>14 дней</p>
                   <h5>Цена</h5>
                     <p>от 11700 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="21">Забронировать</a>
               </li>
-              <li class="cruises__leonor">
+              <li class="cruises__leonor" tabindex="22">
                 <h4>Круиз "Леонор"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -194,10 +194,10 @@
                     <p>17 дней</p>
                   <h5>Цена</h5>
                     <p>от 12500 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="23">Забронировать</a>
               </li>
-              <li class="cruises__minion-1">
+              <li class="cruises__minion-1" tabindex="24">
                 <h4>Круиз "Минион - 1"</h4>
                 <div class="cruises__info">
                   <h5>Маршрут</h5>
@@ -208,8 +208,8 @@
                     <p>11 дней</p>
                   <h5>Цена</h5>
                     <p>от 12300 $</p>
-                  </div>
-                  <a class="cruises__link" href="#">Забронировать</a>
+                </div>
+                <a class="cruises__link" href="#" tabindex="25">Забронировать</a>
               </li>
             </ul>
           </div>
@@ -222,7 +222,7 @@
                 <p>Забронируйте тур <br>за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
               </div>
               <div class="booking__form">
-                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время</p>
+                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</p>
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <label>
                     <input type="text" name="name" placeholder="Имя" required>
@@ -235,7 +235,7 @@
                   </label>
                   <div class="booking__checkbox">
                     <input class="visually-hidden booking__checkbox-input" id="tick" type="checkbox" name="info" checked required>
-                    <label for="tick">Я согласен на обработку моих персональных данных</label>
+                    <label for="tick">Я согласен на обработку моих&nbsp;персональных данных</label>
                   </div>
                   <button class="booking__button" type="submit">Оставить заявку</button>
                 </form>
@@ -247,8 +247,8 @@
           <div class="container">
             <h3 class="visually-hidden">Как нас найти</h3>
             <div class="contacts__info">
-              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1647190495270!5m2!1sru!2sru" width="290" height="316" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              <div>
+              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1647190495270!5m2!1sru!2sru" width="560" height="306" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <div class="contacts__text">
                 <b>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</b>
                 <p>г. Санкт Петербург,<br>ул. Большая&nbsp;Конюшенная, 19/8</p>
                 <a href="tel:88002000000">8-800-200-00-00</a>
@@ -279,21 +279,21 @@
               <ul>
                 <li>
                   <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
-                    <svg width="11" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="social__icon1" width="11" height="20" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
-                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="social__icon2" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a class="social__link social__link--twitter" href="#" aria-label="Twitter">
-                    <svg width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="social__icon3" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
