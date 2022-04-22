@@ -1,14 +1,14 @@
 .cruises {
-  min-height: 883px;
+  //min-height: 883px;
   margin-bottom: 120px;
 
   @include vp-1023 {
-    min-height: 1712px;
+    //min-height: 1712px;
     margin-bottom: 100px;
   }
 
   @include vp-767 {
-    min-height: 3356px;
+    //min-height: 3356px;
     margin-bottom: 65px;
   }
 }
@@ -49,7 +49,7 @@
 
   @include vp-767 {
     padding: 0 10px;
-    grid-template-columns: none;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -67,7 +67,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: $vp-1355) {
+  @media (max-width: 1355px) {
     padding: 25px;
     padding-bottom: 23px;
   }
@@ -206,8 +206,6 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/content/atlantis@2x.jpg");
   }
-
-  @include vp-767
 }
 
 .cruises__odysseus {
@@ -261,13 +259,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
   background-image: none;
   background-color: $color-tangaroa;
 
   h4 {
-    padding-top: 0;
+    padding: 0;
   }
 
   .cruises__info {

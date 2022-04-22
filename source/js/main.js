@@ -5,8 +5,8 @@ const nav = document.querySelector('.nav');
 const navToggle = document.querySelector('.nav__toggle');
 const anchors = document.querySelectorAll('.scroll-to');
 const navWrapper = document.querySelector('.nav__wrapper');
-// const cruisesCards = document.querySelectorAll('cruises li');
-// const cruisesLink = document.querySelector('cruises__link');
+const cruisesCards = document.querySelectorAll('cruises li');
+const cruisesLink = document.querySelector('cruises__link');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    /* for (let cruisesCard of cruisesCards) {
+    for (let cruisesCard of cruisesCards) {
       cruisesCard.addEventListener('click', function (evt) {
         if (cruisesLink) {
           evt.preventDefault();
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-*/
+
     initModals();
   });
 });
