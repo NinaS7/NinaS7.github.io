@@ -1659,7 +1659,7 @@ button,
 
   .cruises li {
     min-height: 386px;
-    max-height: none;
+    max-height: 100vw;
     padding: 35px;
     padding-bottom: 28px;
   }
