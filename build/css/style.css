@@ -970,10 +970,7 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  background-color: #9fc5e8;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 .cruises h4 {
@@ -982,6 +979,17 @@ button,
   font-size: 18px;
   line-height: 27px;
   padding-top: 154%;
+  z-index: 10;
+}
+
+.cruises img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #9fc5e8;
 }
 
 .cruises__info {
@@ -1024,49 +1032,18 @@ button,
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.cruises__astoria {
-  background-image: url("../img/content/astoria.jpg");
-}
-
-.cruises__eline {
-  background-image: url("../img/content/atlantis.jpg");
-}
-
-.cruises__atlantis {
-  background-image: url("../img/content/atlantis.jpg");
-}
-
 .cruises__atlantis p {
   margin-bottom: 6px;
-}
-
-.cruises__odysseus {
-  background-image: url("../img/content/odysseus.jpg");
-}
-
-.cruises__olympia {
-  background-image: url("../img/content/olympia.jpg");
 }
 
 .cruises__olympia p {
   margin-bottom: 6px;
 }
 
-.cruises__aurora {
-  background-image: url("../img/content/aurora.jpg");
-}
-
-.cruises__leonor {
-  background-image: url("../img/content/leonor.jpg");
-}
-
-.cruises__minion-1 {
-  background-image: url("../img/content/minion-1.jpg");
-}
-
 .cruises li:hover,
 .cruises li:focus,
-.cruises li:focus-within {
+.cruises li:focus-within,
+.cruises li:active {
   padding: 28px 25px 33px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1078,26 +1055,35 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-image: none;
   background-color: #011c40;
 }
 
 .cruises li:hover h4,
 .cruises li:focus h4,
-.cruises li:focus-within h4 {
+.cruises li:focus-within h4,
+.cruises li:active h4 {
   padding: 0;
+}
+
+.cruises li:hover img,
+.cruises li:focus img,
+.cruises li:focus-within img,
+.cruises li:active img {
+  display: none;
 }
 
 .cruises li:hover .cruises__info,
 .cruises li:focus .cruises__info,
-.cruises li:focus-within .cruises__info {
+.cruises li:focus-within .cruises__info,
+.cruises li:active .cruises__info {
   display: block;
   padding: 15px 0;
 }
 
 .cruises li:hover .cruises__link,
 .cruises li:focus .cruises__link,
-.cruises li:focus-within .cruises__link {
+.cruises li:focus-within .cruises__link,
+.cruises li:active .cruises__link {
   display: block;
 }
 
@@ -1456,7 +1442,8 @@ button,
 @media (max-width: 1265px) {
   .cruises li:hover .cruises__info,
   .cruises li:focus .cruises__info,
-  .cruises li:focus-within .cruises__info {
+  .cruises li:focus-within .cruises__info,
+  .cruises li:active .cruises__info {
     padding: 10px 0;
   }
 }
@@ -1464,7 +1451,8 @@ button,
 @media (max-width: 1234px) {
   .cruises li:hover,
   .cruises li:focus,
-  .cruises li:focus-within {
+  .cruises li:focus-within,
+  .cruises li:active {
     padding: 20px;
   }
 }
@@ -1498,7 +1486,8 @@ button,
 @media (max-width: 1050px) {
   .cruises li:hover,
   .cruises li:focus,
-  .cruises li:focus-within {
+  .cruises li:focus-within,
+  .cruises li:active {
     padding: 15px;
   }
 }
@@ -1683,13 +1672,15 @@ button,
 
   .cruises li:hover .cruises__info,
   .cruises li:focus .cruises__info,
-  .cruises li:focus-within .cruises__info {
+  .cruises li:focus-within .cruises__info,
+  .cruises li:active .cruises__info {
     padding: 15px 0;
   }
 
   .cruises li:hover,
   .cruises li:focus,
-  .cruises li:focus-within {
+  .cruises li:focus-within,
+  .cruises li:active {
     padding: 28px 34px 33px;
   }
 
@@ -1816,7 +1807,8 @@ button,
 @media (max-width: 801px) {
   .cruises li:hover,
   .cruises li:focus,
-  .cruises li:focus-within {
+  .cruises li:focus-within,
+  .cruises li:active {
     padding: 22px;
   }
 }
@@ -2050,7 +2042,8 @@ button,
 
   .cruises li:hover,
   .cruises li:focus,
-  .cruises li:focus-within {
+  .cruises li:focus-within,
+  .cruises li:active {
     padding: 30px 25px 34px;
   }
 
@@ -2193,38 +2186,6 @@ button,
 
   .advantages {
     background-image: url("../img/content/back-advantages@2x.jpg");
-  }
-
-  .cruises__astoria {
-    background-image: url("../img/content/astoria@2x.jpg");
-  }
-
-  .cruises__eline {
-    background-image: url("../img/content/atlantis@2x.jpg");
-  }
-
-  .cruises__atlantis {
-    background-image: url("../img/content/atlantis@2x.jpg");
-  }
-
-  .cruises__odysseus {
-    background-image: url("../img/content/odysseus@2x.jpg");
-  }
-
-  .cruises__olympia {
-    background-image: url("../img/content/olympia@2x.jpg");
-  }
-
-  .cruises__aurora {
-    background-image: url("../img/content/aurora@2x.jpg");
-  }
-
-  .cruises__leonor {
-    background-image: url("../img/content/leonor@2x.jpg");
-  }
-
-  .cruises__minion-1 {
-    background-image: url("../img/content/minion-1@2x.jpg");
   }
 
   .contacts__map {
