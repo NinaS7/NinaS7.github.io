@@ -10,7 +10,7 @@
 
   @include vp-767 {
     min-height: 510px;
-    margin-bottom: 65px;
+    margin-bottom: 66px;
     margin-top: 56px;
   }
 }
@@ -34,7 +34,7 @@
   font-size: 28px;
   line-height: 42px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   @include vp-1023 {
     font-size: 26px;
@@ -59,15 +59,14 @@
 
 .promo__info p {
   margin: 0;
-  padding-right: 85px;
+  padding-right: 35px;
 
   @include vp-1023 {
-    padding-right: 30px;
+    padding: 0;
   }
 
   @include vp-767 {
-    padding: 0;
-    margin-bottom: 33px;
+    margin-bottom: 2px;
   }
 }
 
