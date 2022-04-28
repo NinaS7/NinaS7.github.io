@@ -628,10 +628,11 @@ button,
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1366px;
   height: 100%;
   margin: 0 auto;
-  width: 85%;
+  width: 100%;
+  padding: 0 103px;
 }
 
 .header {
@@ -1420,13 +1421,6 @@ button,
   }
 } */
 
-@media (max-width: 1355px) {
-  .cruises li {
-    padding: 25px;
-    padding-bottom: 23px;
-  }
-}
-
 @media (max-width: 1329px) {
   .cruises__info h5 {
     font-size: 12px;
@@ -1439,6 +1433,21 @@ button,
   }
 }
 
+@media (max-width: 1310px) {
+  .cruises li:hover,
+  .cruises li:focus,
+  .cruises li:focus-within,
+  .cruises li:active {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 1275px) {
+  .cruises li {
+    padding: 25px;
+  }
+}
+
 @media (max-width: 1265px) {
   .cruises li:hover .cruises__info,
   .cruises li:focus .cruises__info,
@@ -1448,12 +1457,12 @@ button,
   }
 }
 
-@media (max-width: 1234px) {
+@media (max-width: 1240px) {
   .cruises li:hover,
   .cruises li:focus,
   .cruises li:focus-within,
   .cruises li:active {
-    padding: 20px;
+    padding: 15px;
   }
 }
 
@@ -1477,24 +1486,40 @@ button,
   }
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1155px) {
   .cruises li {
     padding: 15px;
   }
 }
 
-@media (max-width: 1050px) {
-  .cruises li:hover,
-  .cruises li:focus,
-  .cruises li:focus-within,
-  .cruises li:active {
-    padding: 15px;
+@media (max-width: 1080px) {
+  .cruises h4 {
+    font-size: 14px;
+  }
+
+  .cruises li:hover .cruises__info,
+  .cruises li:focus .cruises__info,
+  .cruises li:focus-within .cruises__info,
+  .cruises li:active .cruises__info {
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1035px) {
+  .cruises li:hover .cruises__link,
+  .cruises li:focus .cruises__link,
+  .cruises li:focus-within .cruises__link,
+  .cruises li:active .cruises__link {
+    padding: 5px 0;
+    font-size: 10px;
+    line-height: 16px;
   }
 }
 
 @media (max-width: 1023px) {
   .container {
-    width: 88.5%;
+    padding: 0 45px;
   }
 
   .nav {
@@ -1677,6 +1702,15 @@ button,
     padding: 15px 0;
   }
 
+  .cruises li:hover .cruises__link,
+  .cruises li:focus .cruises__link,
+  .cruises li:focus-within .cruises__link,
+  .cruises li:active .cruises__link {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 10px 0;
+  }
+
   .cruises li:hover,
   .cruises li:focus,
   .cruises li:focus-within,
@@ -1804,18 +1838,9 @@ button,
   }
 }
 
-@media (max-width: 801px) {
-  .cruises li:hover,
-  .cruises li:focus,
-  .cruises li:focus-within,
-  .cruises li:active {
-    padding: 22px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
-    width: 91%;
+    padding: 0 25px;
   }
 
   .nav {
@@ -2028,12 +2053,12 @@ button,
 
   .cruises ul {
     padding: 0 10px;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
   }
 
   .cruises li {
     padding: 16px 25px;
+    width: 270px;
+    height: 386px;
   }
 
   .cruises h4 {
@@ -2176,6 +2201,13 @@ button,
 
   .booking {
     background-image: url("../img/content/back-booking-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: 620px) {
+  .cruises ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
