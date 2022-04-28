@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {checkerOnClickLink, checkerOffClickLink} from './card';
 
 const nav = document.querySelector('.nav');
 const navToggle = document.querySelector('.nav__toggle');
@@ -9,6 +10,8 @@ const cruisesCards = document.querySelectorAll('cruises li');
 const cruisesLink = document.querySelector('cruises__link');
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  iosVhFix();
 
   nav.classList.remove('nav--nojs');
   nav.classList.add('nav--closed');
@@ -46,9 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  iosVhFix();
-
   window.addEventListener('load', () => {
+    initModals();
 
     for (let anchor of anchors) {
       anchor.addEventListener('click', function (evt) {
@@ -73,6 +75,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    initModals();
+    checkerOnClickLink();
+    checkerOffClickLink();
+
   });
 });
