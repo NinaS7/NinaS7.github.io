@@ -1,6 +1,7 @@
 .logo {
   width: 70px;
   height: 38px;
+  display: block;
 
   @include vp-1023 {
     width: 38px;

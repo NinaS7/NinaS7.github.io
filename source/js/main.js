@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {checkerOnClickLink, checkerOffClickLink} from './card';
+import {checkerOnClickLink, checkerOffClickLink} from './cruises/card';
 
 const nav = document.querySelector('.nav');
 const navToggle = document.querySelector('.nav__toggle');

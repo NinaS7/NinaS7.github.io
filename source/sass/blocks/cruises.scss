@@ -39,6 +39,10 @@
   gap: 30px;
   color: $color-alice-blue;
 
+  @media (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   @include vp-1023 {
     padding: 0 15px;
     grid-template-columns: 1fr 1fr;
@@ -54,8 +58,8 @@
 }
 
 .cruises li {
-  max-height: 386px;
-  width: 100%;
+  width: 260px;
+  height: 386px;
   margin: 0 auto;
   padding: 30px;
   padding-bottom: 23px;
@@ -64,17 +68,8 @@
   align-items: flex-end;
   position: relative;
 
-  @media (max-width: 1275px) {
-    padding: 25px;
-  }
-
-  @media (max-width: 1155px) {
-    padding: 15px;
-  }
-
   @include vp-1023 {
-    min-height: 386px;
-    max-height: 100vw;
+    width: 309px;
     padding: 35px;
     padding-bottom: 28px;
   }
@@ -82,7 +77,6 @@
   @include vp-767 {
     padding: 16px 25px;
     width: 270px;
-    height: 386px;
   }
 }
 
@@ -93,15 +87,6 @@
   line-height: 27px;
   padding-top: 154%;
   z-index: 10;
-
-  @media (max-width: 1208px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  @media (max-width: 1080px) {
-    font-size: 14px;
-  }
 
   @include vp-1023 {
     padding-top: 123%;
@@ -134,16 +119,6 @@
   font-size: 14px;
   line-height: 20px;
 
-  @media (max-width: 1329px) {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  @media (max-width: 1168px) {
-    font-size: 10px;
-    line-height: 16px;
-  }
-
   @include vp-1023 {
     font-size: 14px;
     line-height: 20px;
@@ -156,17 +131,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-
-  @media (max-width: 1329px) {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  @media (max-width: 1168px) {
-    font-size: 10px;
-    line-height: 16px;
-    margin-bottom: 5px;
-  }
 
   @include vp-1023 {
     margin-bottom: 11px;
@@ -210,6 +174,7 @@
   align-items: flex-start;
   justify-content: space-between;
   background-color: $color-tangaroa;
+  overflow: scroll;
 
   h4 {
     padding: 0;
@@ -223,15 +188,6 @@
     display: block;
     padding: 15px 0;
 
-    @media (max-width: 1265px) {
-      padding: 10px 0;
-    }
-
-    @media (max-width: 1080px) {
-      font-size: 14px;
-      padding: 0;
-    }
-
     @include vp-1023 {
       padding: 15px 0;
     }
@@ -240,25 +196,11 @@
   .cruises__link {
     display: block;
 
-    @media (max-width: 1035px) {
-      padding: 5px 0;
-      font-size: 10px;
-      line-height: 16px;
-    }
-
     @include vp-1023 {
       font-size: 14px;
       line-height: 21px;
       padding: 10px 0;
     }
-  }
-
-  @media (max-width: 1310px) {
-    padding: 25px;
-  }
-
-  @media (max-width: 1240px) {
-    padding: 15px;
   }
 
   @include vp-1023 {
