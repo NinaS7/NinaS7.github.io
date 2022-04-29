@@ -1056,7 +1056,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #011c40;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .cruises li:hover h4,
